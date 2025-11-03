@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTools MCP 介绍 | Chrome DevTools MCP Server Workshop</title>
+    <link rel="stylesheet" href="/agent_mvc/mystatics/css/shonen_jump.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="sj-nav">
+        <ul>
+            <li><a href="devfest_workshop.html">首页</a></li>
+            <li><a href="gdg_devfest.html">GDG & DevFest</a></li>
+            <li><a href="devtools_mcp.html">DevTools MCP</a></li>
+            <li><a href="personal_intro.html">关于我</a></li>
+        </ul>
+    </nav>
+
+    <!-- 主要内容 -->
+    <div class="sj-container">
+        <!-- 英雄区域 -->
+        <div class="sj-hero">
+            <h1 class="sj-title">Chrome DevTools MCP</h1>
+            <p style="font-size: 1.5rem; margin-top: 20px;">模型上下文协议的浏览器控制方案</p>
+        </div>
+
+        <!-- MCP介绍 -->
+        <div class="sj-card">
+            <h2 class="sj-subtitle">什么是 DevTools MCP？</h2>
+            <p class="sj-text">Chrome DevTools MCP Server 是一个基于模型上下文协议（Model Context Protocol）的服务器实现，它允许 AI 助手通过 Chrome DevTools 协议来控制和检查网页浏览器。</p>
+            
+            <div class="sj-speech-bubble">
+                <p>MCP 的出现，让 AI 助手不再局限于文字交互，而是能够直接操作浏览器，完成更复杂的任务！</p>
+            </div>
+        </div>
+
+        <!-- 核心功能 -->
+        <div class="sj-comic-line"></div>
+
+        <div class="sj-chapter">核心功能</div>
+        
+        <div class="sj-grid">
+            <div class="sj-card">
+                <h3 style="color: #e74c3c; margin-bottom: 15px; font-size: 1.5rem;">🎯 页面导航</h3>
+                <p class="sj-text">在网页之间导航，加载新页面，前进后退，完全控制浏览体验。</p>
+            </div>
+            
+            <div class="sj-card">
+                <h3 style="color: #e74c3c; margin-bottom: 15px; font-size: 1.5rem;">🖱️ 页面操作</h3>
+                <p class="sj-text">点击按钮、填写表单、拖动元素，模拟真实用户的交互行为。</p>
+            </div>
+            
+            <div class="sj-card">
+                <h3 style="color: #e74c3c; margin-bottom: 15px; font-size: 1.5rem;">📸 截图功能</h3>
+                <p class="sj-text">截取整个页面或特定元素的截图，保存视觉证据。</p>
+            </div>
+            
+            <div class="sj-card">
+                <h3 style="color: #e74c3c; margin-bottom: 15px; font-size: 1.5rem;">⚡ 性能分析</h3>
+                <p class="sj-text">启动性能跟踪，分析页面加载时间，获取性能优化建议。</p>
+            </div>
+            
+            <div class="sj-card">
+                <h3 style="color: #e74c3c; margin-bottom: 15px; font-size: 1.5rem;">🔍 元素检查</h3>
+                <p class="sj-text">查看和操作 DOM 元素，获取页面结构和属性信息。</p>
+            </div>
+            
+            <div class="sj-card">
+                <h3 style="color: #e74c3c; margin-bottom: 15px; font-size: 1.5rem;">📝 脚本执行</h3>
+                <p class="sj-text">在页面中执行 JavaScript 代码，实现更复杂的自动化功能。</p>
+            </div>
+        </div>
+
+        <!-- 工作原理 -->
+        <div class="sj-comic-line"></div>
+
+        <div class="sj-card">
+            <h2 class="sj-subtitle">工作原理</h2>
+            <p class="sj-text">Chrome DevTools MCP Server 的工作流程非常直观：</p>
+            
+            <ol style="margin: 20px; font-size: 1.1rem; line-height: 2;">
+                <li>AI 助手通过 MCP 协议发送命令到 DevTools MCP Server</li>
+                <li>Server 将命令转换为 Chrome DevTools 协议格式</li>
+                <li>Server 与 Chrome 浏览器实例通信，执行相应操作</li>
+                <li>操作结果通过 MCP 协议返回给 AI 助手</li>
+            </ol>
+
+            <img src="https://picsum.photos/800/300?random=20" alt="DevTools MCP工作流程" class="sj-content-image" style="border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.4); max-width: 100%;">
+        </div>
+
+        <!-- 应用场景 -->
+        <div class="sj-comic-line"></div>
+
+        <div class="sj-card">
+            <h2 class="sj-subtitle">应用场景</h2>
+            
+            <ul class="sj-list">
+                <li><span class="sj-emphasis">前端开发与调试：</span>自动化测试页面功能，分析性能问题</li>
+                <li><span class="sj-emphasis">网页数据采集：</span>智能提取和处理网页信息</li>
+                <li><span class="sj-emphasis">用户体验测试：</span>模拟用户行为，评估交互效果</li>
+                <li><span class="sj-emphasis">自动化任务：</span>完成重复性的网页操作任务</li>
+                <li><span class="sj-emphasis">AI 辅助浏览：</span>让 AI 成为你的智能浏览助手</li>
+            </ul>
+        </div>
+
+        <!-- 回到首页 -->
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="devfest_workshop.html" class="sj-button">返回首页</a>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="sj-footer">
+        <p>© 2025 Chrome DevTools MCP Server Workshop - Google DevFest 特别活动</p>
+        <p style="margin-top: 10px;">由 SJX1943 呈现</p>
+    </footer>
+</body>
+</html>

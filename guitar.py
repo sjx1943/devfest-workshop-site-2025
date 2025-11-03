@@ -5,7 +5,6 @@
 import random
 import tornado
 
-
 def generate_random_numbers():
     numbers = set() #无重复元素集
     while len(numbers) < 6:
@@ -31,3 +30,4 @@ groups = generate_random_numbers()
 # print(groups)
 for i in range(6):
     print(groups[i])
+

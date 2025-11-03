@@ -1,0 +1,429 @@
+/* 少年Jump日漫风格CSS */
+
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial Black', 'Arial', sans-serif;
+    background-color: #fef9e7;
+    color: #333;
+    line-height: 1.6;
+    background-image: 
+        radial-gradient(#ff7979 1px, transparent 1px),
+        radial-gradient(#ff7979 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+    background-attachment: fixed;
+}
+
+/* 标题样式 - 少年Jump大标题风格 */
+.sj-title {
+    font-family: 'Arial Black', 'Impact', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    margin: 30px 0;
+    text-align: center;
+    background: linear-gradient(45deg, #ff4d4d, #ff9900, #ffcc00, #00cc66, #0066ff, #9900ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow:
+        3px 3px 0px rgba(0,0,0,0.2),
+        2px 2px 0px rgba(0,0,0,0.1);
+    position: relative;
+    display: inline-block;
+}
+
+.sj-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: #e74c3c;
+    border-radius: 4px;
+}
+
+/* 副标题样式 */
+.sj-subtitle {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 2rem;
+    color: #e74c3c;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    border-left: 8px solid #e74c3c;
+    padding-left: 15px;
+}
+
+/* 容器样式 */
+.sj-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow:
+        0 0 0 10px #333,
+        0 0 0 15px #e74c3c;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 封面样式 */
+.sj-hero {
+    background-color: #e74c3c;
+    color: white;
+    padding: 60px 40px;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sj-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="none" stroke="rgba(255,255,255,0.1)" width="100" height="100" /><path d="M0,50 L100,50 M50,0 L50,100" stroke="rgba(255,255,255,0.1)" /></svg>');
+    background-size: 200px;
+}
+
+/* 导航样式 */
+.sj-nav {
+    background-color: #333;
+    padding: 15px 0;
+    margin-bottom: 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.sj-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sj-nav li {
+    margin: 0 10px;
+}
+
+.sj-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.sj-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #e74c3c;
+    transition: width 0.3s ease;
+}
+
+.sj-nav a:hover {
+    background-color: #444;
+}
+
+.sj-nav a:hover::after {
+    width: 100%;
+}
+
+/* 内容卡片样式 */
+.sj-card {
+    background-color: #fff;
+    border: 4px solid #333;
+    border-radius: 2px;
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.sj-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 60px 60px 0;
+    border-color: transparent #e74c3c transparent transparent;
+}
+
+.sj-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* 按钮样式 */
+.sj-button {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 12px 24px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 3px solid #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.sj-button:hover {
+    background-color: #c0392b;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.sj-button:active {
+    transform: translateY(0);
+}
+
+/* 列表样式 */
+.sj-list {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.sj-list li {
+    margin: 15px 0;
+    padding-left: 30px;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.sj-list li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* 段落样式 */
+.sj-text {
+    margin: 20px 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* 图片样式 */
+.sj-image {
+    max-width: 100%;
+    height: auto;
+    border: 4px solid #333;
+    border-radius: 2px;
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+.sj-image:hover {
+    transform: scale(1.02);
+}
+
+/* 页脚样式 */
+.sj-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 60px;
+    position: relative;
+}
+
+.sj-footer::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #e74c3c;
+}
+
+/* 网格布局 */
+.sj-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 30px 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .sj-title {
+        font-size: 2.5rem;
+    }
+    
+    .sj-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .sj-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .sj-nav li {
+        margin: 5px 0;
+    }
+    
+    .sj-container {
+        box-shadow:
+            0 0 0 5px #333,
+            0 0 0 8px #e74c3c;
+        padding: 15px;
+    }
+    
+    .sj-hero {
+        padding: 40px 20px;
+    }
+    
+    .sj-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .sj-card {
+        padding: 15px;
+    }
+}
+
+/* 日漫风格的强调元素 */
+.sj-emphasis {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* 日漫风格的气泡对话框 */
+.sj-speech-bubble {
+    background-color: #fff;
+    border: 4px solid #333;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 0;
+    position: relative;
+    max-width: 80%;
+}
+
+.sj-speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 20px 15px 0;
+    border-style: solid;
+    border-color: #333 transparent;
+}
+
+/* 漫画风格的线条装饰 */
+.sj-comic-line {
+    height: 4px;
+    background: repeating-linear-gradient(
+        90deg,
+        #333,
+        #333 10px,
+        transparent 10px,
+        transparent 20px
+    );
+    margin: 40px 0;
+}
+
+/* 日漫风格的章节标记 */
+.sj-chapter {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 5px 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.sj-chapter::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-style: solid;
+    border-width: 15px 0 15px 10px;
+    border-color: transparent transparent transparent #333;
+}
+
+/* 移动设备适配 (小于480px) */
+@media (max-width: 480px) {
+    .sj-title {
+        font-size: 2rem;
+    }
+    
+    .sj-subtitle {
+        font-size: 1.3rem;
+        padding-left: 10px;
+    }
+    
+    .sj-container {
+        padding: 10px;
+        box-shadow:
+            0 0 0 3px #333,
+            0 0 0 5px #e74c3c;
+    }
+    
+    .sj-hero {
+        padding: 30px 15px;
+    }
+    
+    .sj-hero img {
+        max-width: 200px !important;
+    }
+    
+    .sj-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .sj-speech-bubble {
+        max-width: 100%;
+    }
+    
+    .sj-text {
+        font-size: 1rem;
+    }
+    
+    .sj-footer {
+        padding: 20px 10px;
+    }
+}
